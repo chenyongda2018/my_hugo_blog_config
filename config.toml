@@ -1,0 +1,4 @@
+baseURL = "https://chenyongda2018.github.io/"
+languageCode = "en-us"
+title = "Dada's blog"
+theme = "ananke"

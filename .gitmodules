@@ -1,0 +1,7 @@
+[submodule "themes/ananke"]
+	path = themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "public"]
+	path = public
+	url = https://github.com/chenyongda2018/chenyongda2018.github.io.git
+	branch = master
