@@ -8,7 +8,7 @@ date: 2021-09-14T15:26:58+08:00
 
 `内存泄漏`（英语：Memory leak）是在计算机科学中，由于疏忽或错误造成程序未能释放已经不再使用的内存。                                                                                                                 — — — 维基百科
 
-![Untitled.png](https://ws1.sinaimg.cn/large/002Rm80Hly1guga58iupaj60i20b4myd02.jpg)
+![Untitled](https://tva1.sinaimg.cn/large/008i3skNly1gugdlcd1bij60i20b4wet02.jpg)
 
 ## 二.内存泄漏的影响
 
