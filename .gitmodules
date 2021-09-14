@@ -2,6 +2,6 @@
 	path = public
 	url = https://github.com/chenyongda2018/chenyongda2018.github.io.git
 	branch = master
-[submodule "themes/journal"]
-	path = themes/journal
-	url = https://github.com/dashdashzako/hugo-journal.git
+[submodule "themes/charaka-hugo-theme"]
+	path = themes/charaka-hugo-theme
+	url = https://github.com/natarajmb/charaka-hugo-theme.git

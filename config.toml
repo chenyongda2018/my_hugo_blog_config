@@ -1,47 +1,29 @@
 baseURL = "https://chenyongda2018.github.io/"
 languageCode = "zh-cn"
 title = "Dada's blog"
-theme = "binario"
+theme = "charaka-hugo-theme"
+copyright = "&copy; <a href=\"https://github.com/natarajmb\">Nataraj Basappa</a> 2018"
 paginate = "10" # Number of elements per page in pagination
 disqusShortname = "" # Enable comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
-[Author] # Used in authorbox
-  name = "Mr.Chen"
-  bio = "You will never walk alone."
+[params]
 
-[Params]
-  description = "Responsive card-based & code-light Hugo theme" # Site Description. Used in meta description
-  copyright = "Binario" # Copyright holder, otherwise will use .Site.Title
-  opengraph = true # Enable OpenGraph if true
-  schema = true # Enable Schema
-  twitter_cards = true # Enable Twitter Cards if true
-  columns = 2 # Set the number of cards columns. Possible values: 1, 2, 3
-  mainSections = ["posts"] # Set main page sections
-  dateFormat = "January 02, 2006" # Change the format of dates
-  colorTheme = "" # dark-green, dark-blue, dark-red, dark-violet
-  mainMenuAlignment = "right" # Align main menu (desktop version) to the right side
-  authorbox = true # Show authorbox at bottom of single pages if true
-  comments = true # Enable comments for all site pages
-  related = true # Enable Related content for single pages
-  relatedMax = 5 # Set the maximum number of elements that can be displayed in related block. Optional
-  mathjax = true # Enable MathJax for all site pages
-  mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path. Optional
-  mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config. Optional
-  hideNoPostsWarning = false # Don't show no posts empty state warning in main page, if true
+[params.highlight]
+  style = "zenburn"
 
-[Params.Entry]
-  meta = ["date", "categories"] # Enable meta fields in given order
-  toc = false # Enable Table of Contents
-  tocOpen = false # Open Table of Contents block. Optional
+[[params.social]]
+  url = "about.html"
+  fa_icon = "fas fa-info" 
 
-[Params.Featured]
-  previewOnly = false # Show only preview featured image
+[[params.social]]
+  url = "https://github.com/chenyongda2018"
+  fa_icon = "fab fa-github"
 
-[Params.Breadcrumb]
-  enable = true # Enable breadcrumb block globally
-  homeText = "Binario" # Home node text  
+[[params.social]]
+  url = "https://www.linkedin.com/in/%E6%B0%B8%E8%BE%BE-%E9%99%88-1042ab184/"
+  fa_icon = "fab fa-linkedin-in"
 
-[outputs]
-  home = ["HTML", "RSS"]
-
+[[params.social]]
+  url = "https://twitter.com/Yong_da_Chen"
+  fa_icon = "fab fa-twitter"
