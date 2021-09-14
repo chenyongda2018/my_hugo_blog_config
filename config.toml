@@ -5,7 +5,7 @@ theme = "charaka-hugo-theme"
 copyright = "&copy; <a href=\"https://github.com/natarajmb\">Nataraj Basappa</a> 2018"
 paginate = "10" # Number of elements per page in pagination
 disqusShortname = "" # Enable comments by entering your Disqus shortname
-googleAnalytics = "2794096531" # Enable Google Analytics by entering your tracking id
+googleAnalytics = "G-0YXVGRNW9S" # Enable Google Analytics by entering your tracking id
 
 [params]
 
