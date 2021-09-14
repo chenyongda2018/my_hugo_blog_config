@@ -18,13 +18,13 @@ date: 2021-09-14T15:26:58+08:00
 
 最终:OOM → Crash
 
-![Untitled 1.png](http://ww1.sinaimg.cn/large/002Rm80Hly1gug71nxsrxj609l0gywgb02.jpg)
+![Untitled 1](https://tva1.sinaimg.cn/large/008i3skNly1guge4uumelj609l0gy0sy02.jpg)
 
 ## 三. GC Roots
 
 对于使用可达性分析的垃圾回收算法来说，GC roots是一个比较特别的存在，它用来帮助GC判断哪些对象可以被回收，如果这个对象被是GC roots 或者被GC roots引用就不会被回收。
 
-![Untitled 2.png](http://ww1.sinaimg.cn/large/002Rm80Hly1gug71un4dgj61060j4tck02.jpg)
+![Untitled 2](https://tva1.sinaimg.cn/large/008i3skNly1guge6kkyjoj61060j440402.jpg)
 
 哪些可以作为GC roots?
 
@@ -38,7 +38,7 @@ date: 2021-09-14T15:26:58+08:00
 
 在开发中最常见的就是方法中的变量作为GC roots,如下代码:
 
-![Untitled 3.png](http://ww1.sinaimg.cn/large/002Rm80Hly1gug727nsgnj60w809sq6102.jpg)
+![Untitled 3](https://tva1.sinaimg.cn/large/008i3skNly1guge6uh97bj60w809smyg02.jpg)
 
 我们创建了80M大小的内存区域并用变量 b指向这块区域，然后我们调用gc。
 
@@ -48,7 +48,7 @@ date: 2021-09-14T15:26:58+08:00
 
 再看下面一段代码
 
-![Untitled 4.png](http://ww1.sinaimg.cn/large/002Rm80Hly1gug72cmnapj60wf0c178002.jpg)
+![Untitled 4](https://tva1.sinaimg.cn/large/008i3skNly1guge71bss1j60wf0c1q4h02.jpg)
 
 可以看到在Full GC时,分配的80M内存并没有被回收。
 
@@ -60,30 +60,30 @@ date: 2021-09-14T15:26:58+08:00
 
 持有Activity的GC roots的引用链如下图
 
-![Untitled 5.png](http://ww1.sinaimg.cn/large/002Rm80Hly1gug72kz4v7j619c0tcgvm02.jpg)
+![Untitled 5](https://tva1.sinaimg.cn/large/008i3skNly1guge78dbhfj619c0tcn1m02.jpg)
 
 Activity被置空的时机:
 
 在onDestory()方法执行时,ActivityThread通过handleDestroyActivity()方法将 Activity置空
 
-![Untitled 6.png](http://ww1.sinaimg.cn/large/002Rm80Hly1gug72r24vdj60yy1jc4em02.jpg)
+![Untitled 6](https://tva1.sinaimg.cn/large/008i3skNly1guge7dn67dj60u01bidkd02.jpg)
 
 那么Activity被引用者置空后，对GC roots就不可达，可以正常被回收。
 
-![Untitled 7.png](http://ww1.sinaimg.cn/large/002Rm80Hly1gug757r0xdj60n20ergos02.jpg)
+![Untitled 7](https://tva1.sinaimg.cn/large/008i3skNly1guge7m3gj5j60n20erta102.jpg)
 
 ### 1.Handler使用不规范
 
 内部类/匿名内部类 隐式持有外部类的引用
 
-![Untitled 8.png](http://ww1.sinaimg.cn/large/002Rm80Hly1gug75fnp1fj61360zcal102.jpg)
+![Untitled 8](https://tva1.sinaimg.cn/large/008i3skNly1guge7r5l6rj60x90u041d02.jpg)
 
-![Untitled 9.png](http://ww1.sinaimg.cn/large/002Rm80Hly1gug75jx49xj61a613cgzm02.jpg)
+![Untitled 9](https://tva1.sinaimg.cn/large/008i3skNly1guge7yp9lxj60z80u00vs02.jpg)
 
 
 Activity → Handler → Message → MessageQueue → Looper()，有Looper()存在于整个应用的生命周期，所以，如果Activity销毁时，Handler发送的消息还未得到Looper()处理，将导致Activity泄漏
 
-![Untitled 10.png](http://ww1.sinaimg.cn/large/002Rm80Hly1gug75qiqg5j60lv0eignk02.jpg)
+![Untitled 10](https://tva1.sinaimg.cn/large/008i3skNly1guge82vvqdj60lv0eiwfe02.jpg)
 
 
 > 内部类静态化 + WeakReference
@@ -93,13 +93,13 @@ Activity → Handler → Message → MessageQueue → Looper()，有Looper()存�
 1. 通过static将内部类作为独立于外部类的Class
 2. 通过弱引用持有Activity,不耽误Activity回收
 
-![Untitled 11.png](http://ww1.sinaimg.cn/large/002Rm80Hly1gug7hxhnawj60z00wcqdu02.jpg)
+![Untitled 11](https://tva1.sinaimg.cn/large/008i3skNly1guge881auwj60wh0u077m02.jpg)
 
 1. 及时移除未处理的消息以及callback
 
 消除message对Handler的引用
 
-![Untitled 12.png](http://ww1.sinaimg.cn/large/002Rm80Hly1gug7i4py4mj618w0vcwoo02.jpg)
+![Untitled 12](https://tva1.sinaimg.cn/large/008i3skNly1guge8cahvqj616z0u0q6802.jpg)
 
 ### 2.匿名内部类
 
@@ -160,7 +160,7 @@ smButton.setOnClickListener(new View.OnClickListener() {
                 SOME_URI, 
                 true, 
                 yourObserver);
-
+    
     getContentResolver().unregisterContentObserver(yourObserver);
     ```
 
@@ -179,6 +179,6 @@ smButton.setOnClickListener(new View.OnClickListener() {
 
 - LeakCanary
 
-![Untitled 13.png](http://ww1.sinaimg.cn/large/002Rm80Hly1gug7iaq883j621w1yc7wh02.jpg)
+![Untitled 13](https://tva1.sinaimg.cn/large/008i3skNly1guge8huplvj60vj0u0q6f02.jpg)
 
 
