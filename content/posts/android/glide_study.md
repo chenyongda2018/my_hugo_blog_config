@@ -1,7 +1,7 @@
 ---
 title: "Glide学习笔记"
 date: 2019-11-14T20:13:19+08:00
-draft: true
+tags: [Android, Glide]
 ---  
 
 # 一.使用
@@ -164,7 +164,7 @@ mRecyclerView.setAdapter(adapter);
 
 效果图:
 
-<img src="http://ww1.sinaimg.cn/large/9c347cably1g8va8j2lwhg20c00lcqva.gif" alt="Video_20191106_024957_705.gif" style="zoom:67%;" />
+<img src="https://tva1.sinaimg.cn/large/008i3skNly1gugf8e90stj60dc0npjrl02.jpg" alt="Video_20191106_024957_705.gif" style="zoom:67%;" />
 
 
 ## 5.缓存
