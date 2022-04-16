@@ -1,7 +1,6 @@
 ---
 title: "Kotlin Lamdba"
 date: 2022-04-16T15:48:16+08:00
-draft: true
 tags: [Kotlin]
 ---
 
