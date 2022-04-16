@@ -1,5 +1,5 @@
 ---
-title: "Kotlin Lamdba"
+title: "Kotlin Lambda"
 date: 2022-04-16T15:48:16+08:00
 tags: [Kotlin]
 ---
