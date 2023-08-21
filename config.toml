@@ -1,7 +1,8 @@
 baseURL = "https://chenyongda2018.github.io/"
 languageCode = "zh-cn"
 title = "Dada's blog"
-theme = "hugo-ink"
+theme = "charaka-hugo-theme"
+
 
 # Number of elements per page in pagination
 paginate = "10" 
