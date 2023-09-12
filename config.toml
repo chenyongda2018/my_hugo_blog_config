@@ -1,70 +1,62 @@
+
 baseURL = "https://chenyongda2018.github.io/"
 languageCode = "zh-cn"
 title = "Dada's blog"
-theme = "charaka-hugo-theme"
+theme = "vitae"
+paginate = 5
+enableRobotsTXT = true
 
 
-# Number of elements per page in pagination
-paginate = "10" 
-# Enable comments by entering your Disqus shortname
-disqusShortname = "" 
-# Enable Google Analytics by entering your tracking id
-googleAnalytics = "G-0YXVGRNW9S" 
-copyright = "© Copyright notice"
+copyright = "© Copyright notice | [Vitae](https://github.com/dataCobra/hugo-vitae) theme for [Hugo](https://gohugo.io)"
 
-pygmentsstyle = "solarized-light"
+pygmentsstyle = "colorful"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
-# Number of characters to show in summary.
-summaryLength = 20
-
 
 [params]
-	subtitle = "Android Developer."
+    # Add pagetitle to homepage <title> tag
+	#pagetitle = "All about static site generation"
 
-	# Optional 64x64 avatar image.
-	avatar = "https://image.freepik.com/free-vector/young-man-head-with-beard-avatar-character_24877-36786.jpg"
+	# Add a subtitle to your website
+	subtitle = "Android developer."
 
-	# Content types to disable Disqus on.
-	disableDisqusTypes = ["page"]
-	
-	featherIconsCDN = true
+    # Optional 80x80 avatar image.
+	avatar = "img/avatar.jpg"
 
-	mode = "auto" # "dark" or "auto"
-	# customCSS = "css/custom.css"  # Custom CSS applied to default styles.
-	# customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
-	# customJS = ["js/custom.js", "js/custom1.js"]  # Custom JS scripts.
+	# Optional favicons for website
+	#favicon = true
 
-# Nav.
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
+	# Add list of sections that should show up on the homepage
+	# mainSections = ["post"]
 
-[[menu.main]]
-name = "All posts"
-url = "/posts"
-weight = 2
+    # Show reading time on a post
+	readingTime = true
 
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 3
 
-[[menu.main]]
-name = "Tags"
-url = "/tags"
-weight = 4
 
+
+# Comments
+[params.comments]
+# Enable Comments with "true"
+enabled = false
+
+# Comment provider:
+#   disqus (https://disqus.com)
+#   commento (https://commento.io)
+#engine = "disqus"
+
+# Social Menu
 [[params.social]]
 name = "Github"
-icon = "github"
+icon = "fab fa-github"
 url = "https://github.com/chenyongda2018"
+
+#[[params.social]]
+#name = "Email"
+#icon = "fas fa-envelope"
+#cmd = "mailto:cyyy_da@163.com"
 
 [[params.social]]
 name = "RSS"
-icon = "rss"
-url = "/index.xml"
-
-[taxonomies]
-   tag = "tags"
+icon = "fas fa-rss"
+url = "index.xml"
