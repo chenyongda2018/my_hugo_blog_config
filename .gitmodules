@@ -4,12 +4,6 @@
 	url = https://github.com/chenyongda2018/chenyongda2018.github.io
 	branch = master
 
-[submodule "themes/nightfall"]
-	path = themes/nightfall
-	url = https://github.com/LordMathis/hugo-theme-nightfall
-[submodule "themes/binario"]
-	path = themes/binario
-	url = https://github.com/vimux/binario
-[submodule "themes/vitae"]
-	path = themes/vitae
-	url = https://github.com/dataCobra/hugo-vitae.git
+[submodule "themes/Hugo-Octopress"]
+	path = themes/Hugo-Octopress
+	url = https://github.com/parsiya/Hugo-Octopress

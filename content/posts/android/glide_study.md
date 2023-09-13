@@ -1,7 +1,12 @@
 ---
 title: "Glide学习笔记"
 date: 2019-11-14T20:13:19+08:00
-tags: [Android, Glide]
+tags:
+- Android
+- Glide
+toc: true
+categories:
+- Android
 ---  
 
 # 一.使用

@@ -1,7 +1,13 @@
 ---
 title: "Android内存泄漏探究"
-date: 2021-09-14T15:26:58+08:00
-tags: [Android, Performance]
+date: 2022-05-14T15:26:58+08:00
+tags:
+- Android
+- 性能优化
+- 内存泄漏
+toc: true
+categories:
+- Android
 ---  
 
 

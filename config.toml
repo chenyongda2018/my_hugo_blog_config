@@ -1,62 +1,176 @@
-
 baseURL = "https://chenyongda2018.github.io/"
-languageCode = "zh-cn"
-title = "Dada's blog"
-theme = "vitae"
-paginate = 5
-enableRobotsTXT = true
+title = "Petrichor's blog"
+disablePathToLower = false
+languageCode = "en-us"
+theme = "Hugo-Octopress"
+
+# Number of blog posts in each pagination page
+paginate = 6
+
+[permalinks]
+post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the old ones
 
 
-copyright = "© Copyright notice | [Vitae](https://github.com/dataCobra/hugo-vitae) theme for [Hugo](https://gohugo.io)"
-
-pygmentsstyle = "colorful"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
+[markup]
+  [markup.tableOfContents]
+    endLevel = 8
+    startLevel = 1
+  [markup.highlight]
+    style = "solarized-dark"
 
 [params]
-    # Add pagetitle to homepage <title> tag
-	#pagetitle = "All about static site generation"
 
-	# Add a subtitle to your website
-	subtitle = "Android developer."
+    # --- Start sidebar options ---
+  # Number of last posts that will be displayed in the sidebar - set to 0 or remove to hide this section
+  sidebarRecentLimit = 5
 
-    # Optional 80x80 avatar image.
-	avatar = "img/avatar.jpg"
+  # Sidebar header - passed to markdownify so you can write markdown here
+  #sidebarHeader = "About me"
 
-	# Optional favicons for website
-	#favicon = true
+  # Sidebar text also supports markdown
+  # New lines can be added with two spaces at the end of line. New paragraphs can be added with two an empty line.
+  # when adding two new lines, remember to remove the indentation otherwise the new line will be treated as a codeblock
+  #sidebarText = """Here's a [link to google](https://www.google.com)
 
-	# Add list of sections that should show up on the homepage
-	# mainSections = ["post"]
+  #New paragraph
 
-    # Show reading time on a post
-	readingTime = true
+  #Another paragraph which has two spaces in the end to create a new line using markdown  
+  ##New line but not a new paragraph
+  #"""
+  # Sidebar menu - if true will add a sidebar menu between sidebar text and recent posts
+  sidebarMenuEnabled = true
+  sidebarMenuHeader = ""
+  
+  # sidebar links
+  github = "https://github.com/chenyongda2018"
+  bitbucket = ""
+  twitter = ""
+  mastodon = ""
+  keybase = ""
+  stackoverflow = ""
+  linkedin = ""
+  youtube = ""
+  facebook = ""
+  instagram = ""
+
+  # --- End sidebar options ---
+
+  # If set to true, navigation menu links will open in a new window with the exception of links to root ("/")
+  # If this item does not exist or set to false, then navigation menu links will open in the same window
+  navigationNewWindow = true
+
+  # If false, all of blog post will appear on front page (and in pagination)
+  truncate = true
+
+  # Author's name (appears in meta tags and under posts)
+  author = "Petrichor"
+
+  # This text appears in the site header under website title
+  subtitle = "Android developer."
+
+  # Search engine URL
+  searchEngineURL = "https://www.google.com/search"
+
+  # Text of the "Continue Reading" label. Supports markdown and inline HTML.
+  # For example, &rarr; == right arrow.
+  continueReadingText = "阅读更多? &rarr;"
+
+  # Optional piwik tracking
+  # [params.analytics.piwik]
+  #  URL = "https://stats.example.com"
+  #  ID = "42"
+
+  # Switch to true to enable RSS icon link
+  rss = true
+
+  # Set to true to use a text label for RSS instead of an icon
+  # This is overwritten by the "rss" setting
+  textrss = false
+
+  # Website's default description
+  description = ""
+
+  # Populate this with your own search keywords - these will appear in the meta tags
+  # defaultKeywords = ["keyword1" , "keyword2" , "keyword3" , "keyword4"]
+
+  # CSS override files
+  # Paths should be relative to the `static` directory
+  # customCSS = ["css/custom.css","css/custom2.css"]
+
+  # 404.html header and text - both support markdown
+  notFoundHeader = "There's nothing here"
+
+  notFoundText = """Please either go back or use the navigation/sidebar menus.
+  """
+
+  # Set to true to hide ReadingTime on posts
+  disableReadingTime = false
+
+  # Set to true to disable downloading of remote Google fonts
+  disableGoogleFonts = false
+
+  # Remove or Set to false to use local fonts
+  # remoteFonts = false
+  
+  # Remove or set to false to use FontAwesome CDN, otherwise the theme uses ForkAwesome local fonts.
+   fontAwesome = true
+
+  # Generate taxonomy pages
+  generateTaxonomyList = true
+
+  # Sort the taxonomy alphabetically.
+  # sortTaxonomyAlphabetical = true
+
+  # Twitter card config
+  # Enable with this.
+  # twitterCardEnabled = true
+  # Don't include the @.
+  # twitterCardSite = 
+  # twitterCardDomain = "parsiya.net"
+  # Don't include the @.
+  # twitterCardAuthor = "CryptoGangsta"
+
+  # Set to true to enable compact index. Set to false or remove to go back to classic view.
+   compactIndex = true
+
+  # Set mainSections.
+   #mainSections = ["post", "blog"]
+
+  # Site's custom favicon, this is a relative path to the `/static` directory
+   favicon = "newfav.png"
+
+# Google analytics code - remove if you do not have/want Google
+# Analytics - needs JavaScript.
+# googleAnalytics = "G-MEASUREMENT_ID"
+
+# Menu
+# If navigationNewWindow (under [params]) is set to true then all links except root ("/") will open in a new window
+# If it does not exist or is set to false then links will open in the same window
+[[menu.main]]
+  Name = "Site's Home Page"
+  URL = "/"
+  weight = -5
+
+[[menu.main]]
+  Name = "HomePage"
+  URL = "/"
+  weight = -5
+
+[[menu.main]]
+  Name = "This theme on Github"
+  URL = "https://www.github.com/parsiya/hugo-octopress"
 
 
+# Sidebar menus
+# Enable with "sidebarMenuEnabled = true" under [params]
+# Header text is "sidebarMenuHeader" under [params]
 
+[[menu.sidebar]]
+  Name = "category"
+  URL = "/categories/"
+  weight = 1
 
-# Comments
-[params.comments]
-# Enable Comments with "true"
-enabled = false
-
-# Comment provider:
-#   disqus (https://disqus.com)
-#   commento (https://commento.io)
-#engine = "disqus"
-
-# Social Menu
-[[params.social]]
-name = "Github"
-icon = "fab fa-github"
-url = "https://github.com/chenyongda2018"
-
-#[[params.social]]
-#name = "Email"
-#icon = "fas fa-envelope"
-#cmd = "mailto:cyyy_da@163.com"
-
-[[params.social]]
-name = "RSS"
-icon = "fas fa-rss"
-url = "index.xml"
+[[menu.sidebar]]
+  Name = "About me"
+  URL = "/about"
+  weight = 2

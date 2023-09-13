@@ -1,39 +1,15 @@
-+++
-title = "Android性能优化文章"
-date = 2023-09-12T19:43:48+08:00
-draft = false
-tags = [
-    "Android","性能优化"
-]
-+++
+---
+title: "Android性能优化文章"
+date : 2022-05-12T19:43:48+08:00
+draft : false
+tags:
+- Android
+- 性能优化
+toc: true
+categories:
+- Android
+---
 
-<!-- +++
-author = "Hugo Authors"
-authorlink = "https://gohugo.io"
-title = "Markdown Syntax Guide"
-date = "2019-03-11"
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-tags = [
-    "markdown",
-    "css",
-    "html",
-    "themes",
-]
-categories = [
-    "themes",
-    "syntax",
-]
-nofeed = true
-math = true
-notaxonomy = false
-commentable = true
-hidden = false
-norobots = true
-nodate = false
-images = ["/img/example.jpg"]
-imagetext = "An example text for an image you could add!"
-hidemeta = false
-+++ -->
 
 ## 1.布局优化
 - [深入探索Android布局优化（上）](https://juejin.cn/post/6844904047355363341)
