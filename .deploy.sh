@@ -26,7 +26,7 @@ echo ""
 echo "Committing changes to $(pwd)"
 git add .
 git commit -m "$msg"
-git push origin master
+git push origin main
 
 # Add this repos changes to git and commit/push. First 'cd' out of public
 cd ..

@@ -1,9 +1,4 @@
 
-[submodule "public"]
-	path = public
-	url = https://github.com/chenyongda2018/chenyongda2018.github.io
-	branch = master
-
 [submodule "themes/Hugo-Octopress"]
 	path = themes/Hugo-Octopress
 	url = https://github.com/parsiya/Hugo-Octopress
