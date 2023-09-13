@@ -119,7 +119,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   generateTaxonomyList = true
 
   # Sort the taxonomy alphabetically.
-  # sortTaxonomyAlphabetical = true
+   sortTaxonomyAlphabetical = true
 
   # Twitter card config
   # Enable with this.
@@ -134,7 +134,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
    compactIndex = true
 
   # Set mainSections.
-   #mainSections = ["post", "blog"]
+  # mainSections = ["post", "blog"]
 
   # Site's custom favicon, this is a relative path to the `/static` directory
    favicon = "newfav.png"
@@ -146,19 +146,13 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
 # Menu
 # If navigationNewWindow (under [params]) is set to true then all links except root ("/") will open in a new window
 # If it does not exist or is set to false then links will open in the same window
-[[menu.main]]
-  Name = "Site's Home Page"
-  URL = "/"
-  weight = -5
+
 
 [[menu.main]]
-  Name = "HomePage"
+  Name = "主页"
   URL = "/"
-  weight = -5
+  weight = 0
 
-[[menu.main]]
-  Name = "This theme on Github"
-  URL = "https://www.github.com/parsiya/hugo-octopress"
 
 
 # Sidebar menus
@@ -166,11 +160,6 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
 # Header text is "sidebarMenuHeader" under [params]
 
 [[menu.sidebar]]
-  Name = "category"
+  Name = "分类"
   URL = "/categories/"
   weight = 1
-
-[[menu.sidebar]]
-  Name = "About me"
-  URL = "/about"
-  weight = 2
