@@ -1,6 +1,6 @@
-baseURL = "https://chenyongda2018.github.io/"
-title = "Petrichor's blog"
-languageCode = "en-us"
+baseURL = 'https://nsddd.top'
+languageCode = 'en-us'
+title = 'cubxxw is blog'
 theme = "PaperMod"
 
 enableRobotsTXT = true
@@ -10,28 +10,17 @@ buildExpired = false
 googleAnalytics = "UA-123-45"
 pygmentsUseClasses = true
 
-[outputs]
-# necessary for search
-home = ["HTML", "RSS", "JSON"] 
-
 [minify]
 disableXML = true
 minifyOutput = true
 
-[markup]
-  [markup.tableOfContents]
-    endLevel = 8
-    startLevel = 1
-  [markup.highlight]
-    noClasses = false
-
 [params]
 env = "production"
-title = "Petrichor's blog"
-description = "Android developer blog"
-keywords = [ "Android", "Java", "Blog", "Petrichor" ]
-author = "Petrichor"
-images = [ "/images/profile.jpg" ]
+title = "ExampleSite"
+description = "ExampleSite description"
+keywords = [ "Blog", "Portfolio", "PaperMod" ]
+author = "Me"
+images = [ "<link or path of image for opengraph, twitter-cards>" ]
 DateFormat = "January 2, 2006"
 defaultTheme = "auto"
 disableThemeToggle = false
@@ -52,11 +41,11 @@ showtoc = false
 tocopen = false
 
   [params.assets]
-  favicon = "newfav.png"
-  favicon16x16 = "/favicon-16x16.png"
-  favicon32x32 = "/favicon-32x32.png"
-  apple_touch_icon = "/apple-touch-icon.png"
-  safari_pinned_tab = "/safari-pinned-tab.svg"
+  favicon = "<link / abs url>"
+  favicon16x16 = "<link / abs url>"
+  favicon32x32 = "<link / abs url>"
+  apple_touch_icon = "<link / abs url>"
+  safari_pinned_tab = "<link / abs url>"
 
   [params.label]
   text = "Home"
@@ -65,12 +54,12 @@ tocopen = false
 
   [params.profileMode]
   enabled = false
-  title = "Petrichor's blog"
-  subtitle = "Android developer"
-  imageUrl = "/images/profile.jpg"
+  title = "ExampleSite"
+  subtitle = "This is subtitle"
+  imageUrl = "<img location>"
   imageWidth = 120
   imageHeight = 120
-  imageTitle = "Profile"
+  imageTitle = "my image"
 
     [[params.profileMode.buttons]]
     name = "Posts"
@@ -82,19 +71,19 @@ tocopen = false
 
   [params.homeInfoParams]
   Title = "Hi there 👋"
-  Content = "Welcome to my Android development blog"
-
-  [[params.socialIcons]]
-  name = "github"
-  url = "https://github.com/chenyongda2018"
-
-  [[params.socialIcons]]
-  name = "stackoverflow"
-  url = ""
+  Content = "Welcome to my blog"
 
   [[params.socialIcons]]
   name = "twitter"
-  url = ""
+  url = "https://twitter.com/"
+
+  [[params.socialIcons]]
+  name = "stackoverflow"
+  url = "https://stackoverflow.com"
+
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/"
 
 [params.analytics.google]
 SiteVerificationTag = "XYZabc"
@@ -111,7 +100,7 @@ SiteVerificationTag = "XYZabc"
   hiddenInSingle = true
 
   [params.editPost]
-  URL = "https://github.com/chenyongda2018/chenyongda2018.github.io/tree/main/content"
+  URL = "https://github.com/<path_to_repo>/content"
   Text = "Suggest Changes"
   appendFilePath = true
 
@@ -123,23 +112,24 @@ SiteVerificationTag = "XYZabc"
   threshold = 0.4
   minMatchCharLength = 0
   keys = [ "title", "permalink", "summary", "content" ]
-  # Number of last posts that will be displayed in the sidebar - set to 0 or remove to hide this section
-
 
 [[menu.main]]
 identifier = "categories"
-name = "分类"
+name = "categories"
 url = "/categories/"
 weight = 10
 
 [[menu.main]]
 identifier = "tags"
-name = "标签"
+name = "tags"
 url = "/tags/"
 weight = 20
 
 [[menu.main]]
-identifier = "about"
-name = "关于"
-url = "/about/"
+identifier = "example"
+name = "example.org"
+url = "https://example.org"
 weight = 30
+
+[markup.highlight]
+noClasses = false
