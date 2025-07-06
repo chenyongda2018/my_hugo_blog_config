@@ -25,3 +25,24 @@ git submodule update --init --recursive
 本项目包含以下子模块：
 - `themes/PaperMod`: Hugo博客主题
 - `public`: 博客生成的静态文件
+
+## 安装Hugo (Mac系统)
+
+在Mac上安装Hugo推荐使用Homebrew包管理器：
+
+1. 首先安装Homebrew（如果尚未安装）：
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+2. 使用Homebrew安装Hugo：
+```bash
+brew install hugo
+```
+
+3. 验证安装是否成功：
+```bash
+hugo version
+```
+
+如果输出类似`hugo v0.111.3+extended darwin/amd64 BuildDate=unknown`的信息，则表示安装成功。
